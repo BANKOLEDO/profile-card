@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap" rel="stylesheet">
+  <title>Profile card component</title>
+
+  <style>
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      font-family: "Kumbh Sans", sans-serif;
+      flex-direction: column;
+      justify-content: center;
+      overflow: hidden;
+      background-color: hsl(185, 75%, 39%);
+      color: hsl(227, 10%, 46%);
+    }
+
+    .bg-pattern-top {
+      position: absolute;
+      width: 25rem;
+      top: -1rem;
+      left: -9rem;
+    }
+
+    .bg-pattern-bottom {
+      position: absolute;
+      width: 20rem;
+      right: 0rem;
+      bottom: -3rem;
+    }
+
+    .bg-pattern-card {
+      border-radius: 0.5rem 0.5rem 0 0;
+    }
+
+    .card-container {
+      padding: 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 999;
+    }
+
+    .card {
+      width: 21.9rem;
+      height: 23.5rem;
+      display: flex;
+      flex-direction: column;
+      background-color: white;
+      border-radius: 0.5rem;
+    }
+
+    .card-header {
+      height: 15rem;
+    }
+
+    .avatar-image {
+      position: relative;
+      bottom: 2rem;
+      left: 7.5rem;
+      border-radius: 100%;
+      border: 0.4rem solid white;
+    }
+
+    .about {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+
+    .dark-grey {
+      color: hsl(229, 23%, 23%);
+      font-weight: 800;
+    }
+
+    .line {
+      opacity: 0.3;
+      margin-bottom: 1rem;
+      background-color: hsl(227, 10%, 46%);
+    }
+
+    .analytics {
+      display: flex;
+      padding: 0 1rem;
+      justify-content: space-around;
+    }
+
+    .numbers {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      gap: 0.3rem;
+      font-size: 0.6rem;
+    }
+
+    .large-text {
+      font-size: 1rem;
+    }
+
+
+    .attribution { font-size: 11px; text-align: center; color: black;}
+    .attribution a { color: hsl(0, 0%, 0%); font-weight: 800;}
+  </style>
+</head>
+<body>
+  <img src="./images/bg-pattern-top.svg" alt="bg-pattern-top" class="bg-pattern-top">
+  <img src="./images/bg-pattern-bottom.svg" alt="bg-pattern-bottom" class="bg-pattern-bottom">
+  <main class="card-container">
+    <section class="card">
+      <div class="card-header" >
+        <img src="./images/bg-pattern-card.svg" class="bg-pattern-card" alt="bg-pattern-card">
+        <img src="./images/image-victor.jpg" alt="image-victor" class="avatar-image">
+      </div>
+      <div class="about" >
+        <p><span class="dark-grey">Victor Crest</span> 26</p>
+        <p>London</p>
+      </div>
+      <hr class="line">
+      <div class="analytics">
+        <div class="numbers">     
+          <span class="dark-grey large-text">80K</span>Followers
+        </div>
+        <div class="numbers">     
+          <span class="dark-grey large-text">803K</span>Likes
+        </div>
+        <div class="numbers">     
+          <span class="dark-grey large-text">1.4K</span>Photos
+        </div>
+      </div>
+    </section>
+  </main>
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://devolabanks.vercel.app" target="_blank">Dev Olabanks</a>.
+  </div>
+</body>
+</html>
